@@ -68,6 +68,7 @@ struct ContentView: View {
                     }
                     LabeledContent("Total due") {
                         Text(checkAmount + tipValue, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                            .foregroundStyle(tipPercentage > 0 ? .gray : .red)
                     }
                 }
             }
